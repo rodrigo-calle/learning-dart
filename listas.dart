@@ -1,6 +1,6 @@
 void main() {
   List<String> colores = ["Azul", "Rosa", "Verde", "Morado"];
-
+  List<int> numeros = [1, 2, 3, 4, 5];
   // Index corresponde a la posición de cada elemento de la lista
   int index = 1;
 
@@ -19,7 +19,18 @@ void main() {
   // Creación de sublistas
 
   colores.sublist(0, 3);
-  
+
+  // Queries
+
+  colores.where((String color) => color == "Morado");
+
+  // Reduce
+
+  numeros.reduce((value, element) => value + element);
+
+  // Fold: fold recibe un valor inicial
+  numeros.fold(10, (value, element) => value + element);
+
 
   //RECORRIENDO UNA LISTA
 
